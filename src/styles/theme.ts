@@ -11,4 +11,10 @@ export const theme = {
     md: '1rem',
     lg: '1.25rem',
   },
+  breakpoints: {
+    sm: '768px',
+    md: '1024px',
+    lg: '1400px',
+    lgx: '1920px'
+  }
 };

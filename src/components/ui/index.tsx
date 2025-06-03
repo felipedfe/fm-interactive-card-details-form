@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { theme } from '@/styles/theme';
-import bgDesktop from '@/assets/bg-main-desktop.png'
-console.log(bgDesktop)
+import bgDesktop from '@/assets/bg-main-desktop.png';
+import bgMobile from '@/assets/bg-main-mobile.png';
 
 export const MainContainer = styled.main`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
   background-color: ${theme.colors.background};
-  max-width: 1920px;
+  /* max-width: ${theme.breakpoints.lgx}; */
   margin: auto;
   min-height: 100vh;
 `
@@ -31,11 +31,32 @@ export const CardImageWrapper = styled.div`
   width: 445px;
 `
 
-export const CardContainer = styled.div`
+// export const CardContainer = styled.div`
+//   position: relative;
+//   background: url(${bgDesktop});
+//   background-size: cover;
+//   background-position: center;
+
+// `
+
+export const Background = styled.div`
   position: relative;
   background: url(${bgDesktop});
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  width: 35vw;
+  height: 100vh;
+  z-index: 0;
+
+  @media all and (max-width: ${theme.breakpoints.md}) {
+    width: 100vw;
+    height: 30vh;
+    background-image: url(${bgMobile});
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+  }
 `
 
 export const WhiteOverlay = styled.div`
