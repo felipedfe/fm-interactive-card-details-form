@@ -8,7 +8,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: ${({ theme }) => theme.fonts.family};
+    font-size: ${({ theme }) => theme.fonts.baseSize};
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
     -webkit-font-smoothing: antialiased;
